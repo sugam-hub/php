@@ -13,14 +13,14 @@ if( mysqli_connect_error()){
 
 echo "Connected Successfully";
 
-$sql = "SELECT * FROM article ORDER BY published_by";
+$sql = "SELECT * FROM article WHERE id = " . $_GET['id'];
 
 $results = mysqli_query($conn, $sql);
 
 if($results === false){
     echo mysqli_error($conn);
 }else{
-    $articles = mysqli_fetch_all($results, MYSQLI_ASSOC);
+    $article = mysqli_fetch_assoc($results);
 }
 ?>
                                  
@@ -30,17 +30,12 @@ if($results === false){
     </head>
 
     <body>
-        <?php if(empty($articles)): ?>
+        <?php if($article===null): ?>
             <p>Article not found.</p>
             <?php else:?>
-                <ul>
-                    <?php foreach($articles as $article) :?>
-                        <li>
-                            <h2><?= $article['title']; ?></h2>
-                            <p><?= $article['content']; ?></p>
-                        </li>
-                        <?php endforeach;?>
-                </ul>
+                    <h2><?= $article['title']; ?></h2>
+                    <p><?= $article['content']; ?></p>
+                    
                 <?php endif;?>
     </body>
 </html>
