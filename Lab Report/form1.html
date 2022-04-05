@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form1</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="form1.php" method="post">
+            <label for="fullname">Full Name:</label>
+            <input type="text" name="fullname" id="fullname"><br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" name="address" id="address"><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" id="phone"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email"><br><br>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="female">
+            <label for="female">Female</label><br><br>
+
+            <label for="level">Level:</label>
+            <input type="checkbox" name="level" id="checkbox" value="see">SEE/SLC
+            <input type="checkbox" name="level" id="checkbox" value="+2">+2
+            <input type="checkbox" name="level" id="checkbox" value="bachelor">Bachelor
+            <input type="checkbox" name="level" id="checkbox" value="master">Master <br /><br>
+
+            <label for="faculty">Faculty:</label>
+            <select name="faculty" id="faculty">
+                <option value="bca">BCA</option>
+                <option value="bbm">BBM</option>
+                <option value="bbs">BBS</option>
+            </select><br><br>
+
+            <button type="submit" name="submit">Submit</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
